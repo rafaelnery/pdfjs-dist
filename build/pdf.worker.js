@@ -40877,10 +40877,12 @@ var WidgetAnnotation = (function WidgetAnnotationClosure() {
 
     data.readOnly = this.hasFieldFlag(AnnotationFieldFlag.READONLY);
 
-    // Hide signatures because we cannot validate them.
-    if (data.fieldType === 'Sig') {
-      this.setFlags(AnnotationFlag.HIDDEN);
-    }
+    /**
+     * A assinatura deve ser exibida, conforme nossa regra
+     */
+    //if (data.fieldType === 'Sig') {
+    //  this.setFlags(AnnotationFlag.HIDDEN);
+    //}
 
     // Building the full field name by collecting the field and
     // its ancestors 'T' data and joining them using '.'.
